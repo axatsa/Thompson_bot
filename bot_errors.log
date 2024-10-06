@@ -1,0 +1,199 @@
+2024-10-06 17:30:18,894 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+2024-10-06 17:30:18,897 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1215, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 8449, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FastAPI\main.py", line 166, in handle_buttons
+    handle_total(message)
+  File "D:\FastAPI\main.py", line 88, in handle_total
+    bot.send_message(message.chat.id, f"\u0412\u0430\u0448 \u043e\u0431\u0449\u0438\u0439 \u0440\u0430\u0441\u0445\u043e\u0434: {total_expense:.2f} \u0441\u0443\u043c.")
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1751, in send_message
+    apihelper.send_message(
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 271, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+
+2024-10-06 17:30:19,237 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+2024-10-06 17:30:19,240 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1215, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 8449, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FastAPI\main.py", line 166, in handle_buttons
+    handle_total(message)
+  File "D:\FastAPI\main.py", line 88, in handle_total
+    bot.send_message(message.chat.id, f"\u0412\u0430\u0448 \u043e\u0431\u0449\u0438\u0439 \u0440\u0430\u0441\u0445\u043e\u0434: {total_expense:.2f} \u0441\u0443\u043c.")
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1751, in send_message
+    apihelper.send_message(
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 271, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+
+2024-10-06 17:30:19,809 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+2024-10-06 17:30:19,811 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1215, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 8449, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FastAPI\main.py", line 164, in handle_buttons
+    handle_view_expenses(message)
+  File "D:\FastAPI\main.py", line 76, in handle_view_expenses
+    bot.send_message(message.chat.id, "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u0437\u0430\u043f\u0438\u0441\u0430\u043d\u043d\u044b\u0445 \u0440\u0430\u0441\u0445\u043e\u0434\u043e\u0432.")
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1751, in send_message
+    apihelper.send_message(
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 271, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+
+2024-10-06 17:30:21,093 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+2024-10-06 17:30:21,096 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1215, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 8449, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FastAPI\main.py", line 164, in handle_buttons
+    handle_view_expenses(message)
+  File "D:\FastAPI\main.py", line 76, in handle_view_expenses
+    bot.send_message(message.chat.id, "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u0437\u0430\u043f\u0438\u0441\u0430\u043d\u043d\u044b\u0445 \u0440\u0430\u0441\u0445\u043e\u0434\u043e\u0432.")
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1751, in send_message
+    apihelper.send_message(
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 271, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+
+2024-10-06 17:30:23,102 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+2024-10-06 17:30:23,104 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1215, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 8449, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FastAPI\main.py", line 164, in handle_buttons
+    handle_view_expenses(message)
+  File "D:\FastAPI\main.py", line 76, in handle_view_expenses
+    bot.send_message(message.chat.id, "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u0437\u0430\u043f\u0438\u0441\u0430\u043d\u043d\u044b\u0445 \u0440\u0430\u0441\u0445\u043e\u0434\u043e\u0432.")
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1751, in send_message
+    apihelper.send_message(
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 271, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+
+2024-10-06 17:30:27,164 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+2024-10-06 17:30:27,167 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1215, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 8449, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FastAPI\main.py", line 164, in handle_buttons
+    handle_view_expenses(message)
+  File "D:\FastAPI\main.py", line 76, in handle_view_expenses
+    bot.send_message(message.chat.id, "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u0437\u0430\u043f\u0438\u0441\u0430\u043d\u043d\u044b\u0445 \u0440\u0430\u0441\u0445\u043e\u0434\u043e\u0432.")
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1751, in send_message
+    apihelper.send_message(
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 271, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+
+2024-10-06 17:30:35,202 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+2024-10-06 17:30:35,203 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1215, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 8449, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FastAPI\main.py", line 170, in handle_buttons
+    handle_delete_expense(message)
+  File "D:\FastAPI\main.py", line 133, in handle_delete_expense
+    bot.send_message(message.chat.id, "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u0440\u0430\u0441\u0445\u043e\u0434\u043e\u0432 \u0434\u043b\u044f \u0443\u0434\u0430\u043b\u0435\u043d\u0438\u044f.")
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1751, in send_message
+    apihelper.send_message(
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 271, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot was blocked by the user
+
+2024-10-06 17:43:27,743 - ERROR - \u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0431\u043e\u0442\u0430 \u0441 \u0442\u043e\u043a\u0435\u043d\u043e\u043c 7829645217:AAGJJr90Q1ipUWY5v_YRdMl9307jOVxRaAY: UNIQUE constraint failed: admins.user_id
+2024-10-06 17:44:37,297 - ERROR - \u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0431\u043e\u0442\u0430 \u0441 \u0442\u043e\u043a\u0435\u043d\u043e\u043c 7117073240:AAG_eYpk6FPy-NLB9cCERmFSjPSdFTtYsXY: UNIQUE constraint failed: admins.user_id
+2024-10-06 17:47:14,477 - ERROR - \u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0431\u043e\u0442\u0430 \u0441 \u0442\u043e\u043a\u0435\u043d\u043e\u043c 7977052018:AAF42h_ov_dpybta-rWvJ7FklVF4RnPFHxo: UNIQUE constraint failed: admins.user_id
