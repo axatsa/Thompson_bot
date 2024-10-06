@@ -1,6 +1,7 @@
 import sqlite3
 
 
+
 # Подключение к базе данных
 def connect_db():
     return sqlite3.connect('expenses.db')

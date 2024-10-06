@@ -8,3 +8,4 @@ def setup_logger():
         level=logging.ERROR,  # Уровень логирования
         format='%(asctime)s - %(levelname)s - %(message)s',  # Формат логов
     )
+
