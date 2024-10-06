@@ -1,10 +1,9 @@
 import telebot
 import logging
 from telebot import types
-from db import connect_db, add_user, get_user_id, add_expense, get_expenses, get_total_expense, set_admin, is_admin, \
+from db import add_user, get_user_id, add_expense, get_expenses, get_total_expense, set_admin, is_admin, \
     get_all_users, get_total_expense_for_all, delete_expense
-import time
-from telebot.apihelper import ApiTelegramException
+
 import threading
 
 # Настройка логирования
@@ -50,7 +49,7 @@ def start_bot(bot_token):
     def process_amount(message):
         try:
             amount = float(message.text.replace(',', '.'))
-            bot.send_message(message.chat.id, "Введите описание:")
+            bot.send_message(message.chat.id, "Цель расхода:")
             bot.register_next_step_handler(message, lambda msg: save_expense(msg, amount))
         except ValueError:
             bot.send_message(message.chat.id, "Пожалуйста, введите корректную сумму.")
@@ -93,9 +92,22 @@ def start_bot(bot_token):
         user_id = message.chat.id
         if is_admin(user_id):
             users = get_all_users()
-            markup = types.ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
-            for user in users:
-                markup.add(user[1])  # Добавляем имя пользователя
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+
+            # Формируем строки с пользователями в два ряда
+            user_rows = []
+            for i in range(0, len(users), 2):
+                row = []
+                if i < len(users):
+                    row.append(users[i][1])  # Добавляем имя пользователя
+                if i + 1 < len(users):
+                    row.append(users[i + 1][1])  # Добавляем имя следующего пользователя, если он есть
+                user_rows.append(row)
+
+            # Создаем кнопки для каждого ряда
+            for row in user_rows:
+                markup.add(*[types.KeyboardButton(username) for username in row])
+
             bot.send_message(message.chat.id, "Выберите пользователя для просмотра общего расхода:",
                              reply_markup=markup)
             bot.register_next_step_handler(message, lambda msg: admin_view_user_total(msg, users))
@@ -113,6 +125,7 @@ def start_bot(bot_token):
                              f"Общий расход пользователя {selected_username}: {total_expense:.2f} сум.")
         else:
             bot.send_message(message.chat.id, "Пользователь не найден.")
+
         show_main_menu(message.chat.id)
 
     @bot.message_handler(commands=['total_all'])
@@ -190,4 +203,4 @@ if __name__ == '__main__':
         thread.start()
 
     for thread in threads:
-        thread.join()  # Ждем завершения всех потоков
+        thread.join()

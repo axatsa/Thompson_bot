@@ -1,5 +1,4 @@
 import sqlite3
-import os
 
 
 # Подключение к базе данных
